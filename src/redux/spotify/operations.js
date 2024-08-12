@@ -15,6 +15,7 @@ export const fetchPlayList = createAsyncThunk(
       const data = await result;
       return data;
     } catch (e) {
+      window.location.replace('/');
       return thunkAPI.rejectWithValue(e.message);
     }
   },
