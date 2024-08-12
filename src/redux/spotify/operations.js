@@ -13,7 +13,6 @@ export const fetchPlayList = createAsyncThunk(
         getAllDataRecursively(url, [], resolve, reject, token);
       });
       const data = await result;
-      console.log('ITEMS', data);
       return data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);

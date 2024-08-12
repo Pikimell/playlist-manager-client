@@ -1,5 +1,7 @@
 :root {
-  --primary-color: grey;
-  --second-color: silver;
+  --primary: rgb(163, 224, 255);
+  --second: rgb(32, 45, 52);
   --bg-primary: rgb(244, 244, 244);
+  --font-primary: rgb(24, 24, 24);
+  --font-second: rgb(152, 152, 152);
 }

@@ -1,15 +1,16 @@
 import style from './PlayListPage.module.css';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchPlayList } from '../../redux/spotify/operations.js';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList/ItemList.jsx';
+import { selectItems } from '../../redux/spotify/selectors.js';
 
 const PlayListPage = ({}) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const token = searchParams.get('access_token');
   const dispatch = useDispatch();
+  const items = useSelector(selectItems);
 
   useEffect(() => {
     dispatch(fetchPlayList(token));
@@ -17,7 +18,7 @@ const PlayListPage = ({}) => {
 
   return (
     <div>
-      <ItemList items={[]} />
+      <ItemList items={items} />
     </div>
   );
 };
