@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import templateReducer from './template/templateSlice';
+import spotifyReducer from './spotify/spotifySlice';
 
 export const store = configureStore({
   reducer: {
-    template: templateReducer,
+    spotify: spotifyReducer,
   },
 });

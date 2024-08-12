@@ -22,3 +22,14 @@ body {
 * {
   touch-action: manipulation !important;
 }
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  background-color: var(--bg-primary);
+}

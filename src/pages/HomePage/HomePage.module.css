@@ -1,0 +1,14 @@
+.form {
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
